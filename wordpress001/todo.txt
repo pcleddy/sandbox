@@ -1,0 +1,5 @@
+x get mysql up from scratch
+x get mysql data volume attached, changes persistent
+* get wordpress up from scratch
+* use creds file to set wordpress settings
+* run sql to create wordpress db and user/pass

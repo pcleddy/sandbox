@@ -1,0 +1,41 @@
+version: "3.3"
+
+services:
+    db01:
+        build:
+            context: ./
+            dockerfile: mysql.docker
+        volumes:
+          - db_data:/var/lib/mysql
+        # ports:
+        #     - "8001:80"
+        #     - "3307:3306"
+        # environment:
+        #     MYSQL_USER: wordpress
+        #     MYSQL_PASSWORD: wordpress_pass
+        secrets:
+          - creds
+
+    # wordpress01:
+    #     depends_on:
+    #         - db01
+    #     build:
+    #         context: ./
+    #         dockerfile: wordpress.docker
+    #     ports:
+    #         - "8000:80"
+    #     # environment:
+    #     #     WORDPRESS_DB_HOST: db:3306
+    #     #     WORDPRESS_DB_USER: wordpress
+    #     #     WORDPRESS_DB_PASSWORD: wordpress
+    #     secrets:
+    #       - creds
+
+secrets:
+  creds:
+    file: ./creds.txt
+
+volumes:
+    db_data:
+
+
