@@ -1,0 +1,10 @@
+flask
+flask-restful
+nose
+pymysql
+celery[redis]
+# git+https://github.jpl.nasa.gov/sabaker/ocio_sciencelogic.git
+# git+https://github.jpl.nasa.gov/sabaker/ocio_utilities.git
+# git+https://github.jpl.nasa.gov/sabaker/ocio_remedy.git
+# git+https://github.jpl.nasa.gov/sabaker/mr_tasks.git
+# git+https://github.jpl.nasa.gov/sabaker/mr_utilities.git
